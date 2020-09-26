@@ -16,45 +16,46 @@
                 <div class="columns">
                     <div class="column is-4 is-offset-4">
                         <div class="box" style="padding: 35px">
-                            <h1 class="title has-text-centered has-text-weight-bold has-text-dark">Sign in to your account</h1>
+                            <h1 class="title has-text-centered has-text-weight-bold has-text-dark">Sign in to your
+                                account</h1>
                             <br>
-                            <div class="field">
-                                <label class="label has-text-weight-semibold">Email</label>
-                                <p class="control has-icons-left has-icons-right">
-                                    <input class="input" type="email" name="email" placeholder="johnsmith@mail.com">
-                                    <span class="icon is-small is-left">
-                                        <i class="fas fa-envelope"></i>
-                                    </span>
-                                </p>
-                            </div>
-                            <br>
-                            <div class="field">
-                                <label class="label has-text-weight-semibold">Password</label>
-                                <p class="control has-icons-left">
-                                    <input class="input" type="password" name="password" placeholder="*******">
-                                    <span class="icon is-small is-left">
-                                        <i class="fas fa-lock"></i>
-                                    </span>
-                                </p>
-                            </div>
-                            <br>
-                            <div class="field">
-                                <div class="control">
-                                    <label class="checkbox">
-                                        <input type="checkbox" name="remember">
-                                        Remember me
-                                    </label>
-                                    <a style="float:right" href="#">Forgot your password?</a>
+                            <form action="/login" method="post">
+                                <div class="field">
+                                    <label class="label has-text-weight-semibold">Email</label>
+                                    <p class="control has-icons-left has-icons-right">
+                                        <input class="input" type="email" name="email" placeholder="johnsmith@mail.com">
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-envelope"></i>
+                                        </span>
+                                    </p>
                                 </div>
-                            </div>
-                            <br>
-                            <div class="field">
-                                <p class="control">
-                                    <button class="button is-link is-fullwidth">
-                                        Login
-                                    </button>
-                                </p>
-                            </div>
+                                <br>
+                                <div class="field">
+                                    <label class="label has-text-weight-semibold">Password</label>
+                                    <p class="control has-icons-left">
+                                        <input class="input" type="password" name="password" placeholder="*******">
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-lock"></i>
+                                        </span>
+                                    </p>
+                                </div>
+                                <br>
+                                <div class="field">
+                                    <div class="control">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="remember">
+                                            Remember me
+                                        </label>
+                                        <a style="float:right" href="#">Forgot your password?</a>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="field">
+                                    <p class="control">
+                                        <input type="submit" value="Log In" class="button is-link is-fullwidth">
+                                    </p>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
