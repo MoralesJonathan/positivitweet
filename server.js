@@ -8,10 +8,12 @@ server
   .use(bodyParser.json())
   .use(bodyParser.urlencoded({
     extended: true
-  }))
-  .use(logger('dev'))
+  }));
+  
+  environment == 'development'? server.use(logger('dev')) : server.use(logger('short'));
+  
 
-  .get('/', function(req, res) {
+  server.get('/', function(req, res) {
     res.send('Hello world!')
   })
 

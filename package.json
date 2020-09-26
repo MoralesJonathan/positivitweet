@@ -1,9 +1,9 @@
 {
-  "name": "nodeboilerplate",
-  "version": "0.0.0",
-  "description": "Boilerplating node server.",
+  "name": "positivitweet",
+  "version": "0.0.1",
+  "description": "App for managing positivitweet bot",
   "main": "server.js",
-  "repository": "https://github.com/MoralesJonathan/NodeBoilerplate",
+  "repository": "https://github.com/MoralesJonathan/positivitweet",
   "author": "Jonathan Morales <jonmorazav@yahoo.com>",
   "dependencies": {
     "body-parser": "^1.19.0",
