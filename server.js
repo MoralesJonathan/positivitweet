@@ -39,7 +39,7 @@ passport.deserializeUser(function (id, done) {
 });
 
 server.get('/',require('connect-ensure-login').ensureLoggedIn(), function (req, res) {
-  res.send('Hello world!')
+  res.sendFile(path.join(__dirname + '/public/home.html'));
 })
 
 .get('/login', function (req, res) {

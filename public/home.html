@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #F4F5F7;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+    <style>
+        .tweetInput {
+            width: 97%;
+        }
+        a.delete {
+            margin-top: 9px;
+        }
+        a.delete.newDelete{
+            margin-left: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar is-info has-shadow is-spaced" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    <img src="assets/fakeLogo.png" height="30">
+                </a>
+
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-light" href="/logout">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <div class="card">
+        <div class="card-content">
+            <div class="container">
+                <p class="title is-4">
+                    Positivitweet Bot Manager
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="columns is-centered">
+        <div class="column is-half">
+            <h1 class="subtitle is-4">
+                Tweets in queue
+            </h1>
+            <table id="tweetsTable" class="table is-striped is-fullwidth">
+                <thead>
+                    <tr>
+                        <th>Pos.</th>
+                        <th>Tweet</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br>
+    <div class="columns is-centered">
+        <div class="column is-half">
+            <h1 class="subtitle is-4">
+                Add more tweets to queue
+            </h1>
+            <form>
+                <div class="field">
+                    <label class="label is-inline is-size-5 has-text-weight-semibold">Tweet:</label>
+                    <p class="buttons is-pulled-right" style="margin-bottom: 0;">
+                        <span id="addTweetInput" class="button is-small" style="margin-top: -2px;">
+                            <span class="icon is-small">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </span>
+                    </p>
+                </div>
+                <div id="inputContainer">
+                    <div class="field" data-inputid="0">
+                        <div class="control">
+                            <input class="input tweetInput" type="text" placeholder="Type tweet here"> <a class="delete" data-inputid="0"></a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="field">
+                    <div class="control">
+                        <button id="submitTweets" class="button is-link">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/logic.js"></script>
+</body>
+
+</html>
