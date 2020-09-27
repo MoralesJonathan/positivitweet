@@ -9,19 +9,23 @@
     <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
     <style>
         .tweetInput {
-            width: 97%;
+            width: 95%;
         }
         a.delete {
             margin-top: 9px;
         }
         a.delete.newDelete{
-            margin-left: 4px;
+            margin-left: 12px;
+        }
+        footer {
+            padding: 3rem 1.5rem 4rem!important;
+            margin-top: 50px;
         }
     </style>
 </head>
 
 <body>
-    <nav class="navbar is-info has-shadow is-spaced" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-white has-shadow is-spaced" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
                 <a class="navbar-item" href="/">
@@ -53,18 +57,15 @@
         </div>
         </div>
     </nav>
-    <div class="card">
-        <div class="card-content">
-            <div class="container">
-                <p class="title is-4">
-                    Positivitweet Bot Manager
-                </p>
-            </div>
-        </div>
-    </div>
     <br>
     <div class="columns is-centered">
         <div class="column is-half">
+            <br>
+            <p class="title is-3">
+                Positivitweet Bot Manager
+            </p>
+            <br>
+            <div class="box">
             <h1 class="subtitle is-4">
                 Tweets in queue
             </h1>
@@ -78,11 +79,13 @@
                 <tbody>
                 </tbody>
             </table>
+            </div>
         </div>
     </div>
     <br>
     <div class="columns is-centered">
         <div class="column is-half">
+            <div class="box">
             <h1 class="subtitle is-4">
                 Add more tweets to queue
             </h1>
@@ -100,7 +103,7 @@
                 <div id="inputContainer">
                     <div class="field" data-inputid="0">
                         <div class="control">
-                            <input class="input tweetInput" type="text" placeholder="Type tweet here"> <a class="delete" data-inputid="0"></a>
+                            <input class="input tweetInput" type="text" placeholder="Type tweet here"> <a class="delete" style="margin-left: 9px" data-inputid="0"></a>
                         </div>
                     </div>
                 </div>
@@ -111,9 +114,16 @@
                     </div>
                 </div>
             </form>
+            </div>
         </div>
     </div>
-
+    <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Positivitweet</strong> Made at <a href="https://shellhacks.net/">Shellhacks 2020</a>.
+          </p>
+        </div>
+      </footer>
     <script src="assets/logic.js"></script>
 </body>
 
