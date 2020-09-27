@@ -72,3 +72,35 @@ xhttp.onreadystatechange = function () {
 };
 xhttp.open("GET", "https://positivitweets.azurewebsites.net/api/functionTests", true);
 xhttp.send();
+
+
+var xhttp2 = new XMLHttpRequest();
+xhttp2.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+        var tweetInfo = JSON.parse(xhttp2.responseText);
+        document.getElementById('favCount').textContent = tweetInfo.favorite_count;
+        document.getElementById('retweetCount').textContent = tweetInfo.retweet_count;
+        document.getElementById('replysCount').textContent = tweetInfo.favorite_count + tweetInfo.retweet_count;
+        document.getElementById('dateCreated').textContent = new Date(tweetInfo.created_at).toLocaleTimeString();
+        jsonp("https://publish.twitter.com/oembed?url=https://twitter.com/PositivitweetB/status/" + tweetInfo.id_str, function(data) {
+        document.getElementById('tweetEmbed').innerHTML = data.html;
+});
+    }
+};
+xhttp2.open("GET", "https://positivitweets.azurewebsites.net/api/tweetStatus", true);
+xhttp2.send();
+
+
+function jsonp(url, callback) {
+    var callbackName = 'jsonp_callback_' + Math.round(100000 * Math.random());
+    window[callbackName] = function(data) {
+        delete window[callbackName];
+        document.body.removeChild(script);
+        callback(data);
+    };
+
+    var script = document.createElement('script');
+    script.src = url + (url.indexOf('?') >= 0 ? '&' : '?') + 'callback=' + callbackName;
+    document.body.appendChild(script);
+}
+
